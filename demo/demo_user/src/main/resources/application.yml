@@ -1,0 +1,18 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: demo-user
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  instance:
+    prefer-ip-address: true         #将IP注册到服务注册中心
+
+#放开所有节点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
